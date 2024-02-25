@@ -2,7 +2,8 @@ package model;
 
 import interfaces.Lottable;
 
-public class Lot extends Toy implements Lottable{
+
+public class Lot extends Toy implements Lottable, Comparable<Lot>{
 
     public Byte chance;
     public Integer count;
@@ -38,7 +39,24 @@ public class Lot extends Toy implements Lottable{
         // TODO Auto-generated method stub
         return chance;
     }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Lot itPharmacy = (Lot) obj;
+        return getId() == itPharmacy.getId();
+    }
 
+    @Override
+    public int hashCode() {
+
+        return getId();
+    }
+    @Override
+    public int compareTo(Lot obj) {
+
+       return Integer.compare(this.getId(), obj.getId());
+    }
 
     
 }

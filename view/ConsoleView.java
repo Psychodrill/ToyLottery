@@ -1,5 +1,4 @@
 package view;
-import java.util.ArrayList;
 import java.util.Scanner;
 import interfaces.Publisher;
 public class ConsoleView implements interfaces.Listener{
@@ -22,26 +21,26 @@ public class ConsoleView implements interfaces.Listener{
             System.out.print("2 - Edit Chance by id");
             System.out.print("3 - Launch lotteryMachine");
             String choice = scanner.nextLine();
-            if(choice=="1"){
+            if(choice.equals("1")){
                 System.out.println("Input Id, Toyname, Chance, Count, separated by space ...");
                 String next= scanner.nextLine();
                 dataStrings = next.split("\\s");
                 lmConsView.addLottable(this);
             }
-            else if(choice=="2"){
+            else if(choice.equals("2")){
                 System.out.println("Input Id and Chance, separated by space ...");
                 String next= scanner.nextLine();
                 dataStrings = next.split("\\s");
                 lmConsView.editLottable(this);
 
             }
-            else if(choice=="3"){
+            else if(choice.equals("3")){
 
                 lmConsView.launchLottery(this);
 
             }
             else{
-                System.out.print("You are input unacceptable symbol");
+                System.out.println("You are input unacceptable symbol");
             }
         }
     }
