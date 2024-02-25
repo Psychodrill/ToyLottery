@@ -1,15 +1,15 @@
 import model.LotteryMachine;
 import view.ConsoleView;
-import viewmodel.RecorderConsoleView;
+import viewmodel.LotteryConsoleView;
 import interfaces.*;
 
 public class Application {
  
     public void run(){
 
-        LotteryMachine recorder = new LotteryMachine();
-        Publisher recConsView= new RecorderConsoleView(recorder);
-        ConsoleView consView = new ConsoleView(recConsView);
+        LotteryMachine lm = new LotteryMachine();
+        Publisher lmConsView= new LotteryConsoleView(lm);
+        ConsoleView consView = new ConsoleView(lmConsView);
         consView.run();
 
     }

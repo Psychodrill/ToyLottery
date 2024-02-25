@@ -32,10 +32,7 @@ public class Lot extends Toy implements Lottable{
     public void setCount(int count) {
         this.count=count;
     }
-    @Override
-    public Toy getToy() {
-        return (Toy)this;
-    }
+
     @Override
     public Byte getChance() {
         // TODO Auto-generated method stub

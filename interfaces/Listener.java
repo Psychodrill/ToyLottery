@@ -1,10 +1,9 @@
 package interfaces;
 
-import java.util.ArrayList;
 
-public interface Listener<String> {
+public interface Listener {
     
-    void showResult(ArrayList<String> result);
+    void showResult(String result);
     String[] getData();
 
 }

@@ -1,5 +1,7 @@
 package interfaces;
 public interface Publisher {
-    void getResult(Listener<String>listener);
+    void addLottable(Listener listener);
+    void editLottable(Listener listener);
+    void launchLottery(Listener listener);
     
 }
