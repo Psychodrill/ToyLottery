@@ -18,19 +18,26 @@ public class LotteryMachine {
         if(prize!=null){
             log.log(Level.INFO, String.format("Drop item: %s",prize.getName()));
             checkCount();
+            return prize.toString();
         }
-
-        return prize.toString();
+        else{
+            return "Sorry there are no toys in machine!";
+        }
+        
     }
 
     private Lottable getPrize(){
        
         Double luckyNumber =Math.random()*getChanceSum();
         // Double onePercent = chanceSum/100;
+        //System.out.println(getChanceSum());
+        //System.out.println(luckyNumber);
         Double weightCount=0.0;
         for(Lottable item:lots){
             weightCount+=item.getChance();
+           // System.out.println(weightCount);
             if(weightCount>luckyNumber){
+             //   System.out.println("luck");
                return retrieve(item.getId());
                
             }
@@ -80,5 +87,6 @@ public class LotteryMachine {
             }
         }
         lots.remove(deletedLot);
+
     }
 }

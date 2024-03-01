@@ -1,0 +1,10 @@
+Mar 01, 2024 9:00:17 PM model.LotteryMachine launchMachine
+INFO: Drop item: fridge
+Mar 01, 2024 9:00:21 PM model.LotteryMachine launchMachine
+INFO: Drop item: fridge
+Mar 01, 2024 9:00:24 PM model.LotteryMachine launchMachine
+INFO: Drop item: car
+Mar 01, 2024 9:00:31 PM model.LotteryMachine launchMachine
+INFO: Drop item: fridge
+Mar 01, 2024 9:00:34 PM model.LotteryMachine launchMachine
+INFO: Drop item: house
