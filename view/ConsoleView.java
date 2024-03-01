@@ -12,14 +12,14 @@ public class ConsoleView implements interfaces.Listener{
 
     public void run(){
        
-
+        Scanner scanner = new Scanner(System.in);
         while (true) {
-
-            Scanner scanner = new Scanner(System.in);
+           
             //System.out.println("Input Id, Toyname, Chance, Count, separated by space ...");
-            System.out.print("1 - Add Toys");
-            System.out.print("2 - Edit Chance by id");
-            System.out.print("3 - Launch lotteryMachine");
+            System.out.println("1 - Add Toys");
+            System.out.println("2 - Edit Chance by id");
+            System.out.println("3 - Launch lotteryMachine");
+            System.out.println("4 - Close");
             String choice = scanner.nextLine();
             if(choice.equals("1")){
                 System.out.println("Input Id, Toyname, Chance, Count, separated by space ...");
@@ -39,9 +39,15 @@ public class ConsoleView implements interfaces.Listener{
                 lmConsView.launchLottery(this);
 
             }
+            else if(choice.equals("4")){
+                scanner.close();
+                return;
+
+            }
             else{
                 System.out.println("You are input unacceptable symbol");
             }
+            
         }
     }
 

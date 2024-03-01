@@ -15,8 +15,11 @@ public class LotteryMachine {
 
     public String launchMachine(){
         Lottable prize =getPrize();
-        log.log(Level.INFO, String.format("Drop item: %s",prize.getName()));
-        checkCount();
+        if(prize!=null){
+            log.log(Level.INFO, String.format("Drop item: %s",prize.getName()));
+            checkCount();
+        }
+
         return prize.toString();
     }
 
