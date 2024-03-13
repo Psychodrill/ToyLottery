@@ -51,7 +51,6 @@ public class ConsoleView implements interfaces.Listener{
         }
     }
 
-
     public String[] getData(){
         return dataStrings;
     }

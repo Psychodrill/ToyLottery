@@ -23,7 +23,6 @@ public class Lot extends Toy implements Lottable, Comparable<Lot>{
     @Override
     public void setChance(byte chance) {
 
-
     }
     @Override
     public int getCount() {
